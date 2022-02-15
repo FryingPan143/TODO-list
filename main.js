@@ -14,9 +14,13 @@ input.addEventListener("keyup", function (e) {
 
 submit.addEventListener("click", function () {
     let iValue = input.value;
-    if (iValue.length > 0) {
+    let regex = /^[0-9a-zA-Z]+$/;
+    if (iValue.length > 0 && iValue.match(regex)) {
         generateItem(iValue);
         clearInput();
+    } else {
+        clearInput();
+        alert("Only Letters and numbers allowed")
     }
 });
 
