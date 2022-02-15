@@ -20,7 +20,7 @@ submit.addEventListener("click", function () {
         clearInput();
     } else {
         clearInput();
-        alert("Only Letters and numbers allowed")
+        alert("Only Letters and numbers allowed");
     }
 });
 
