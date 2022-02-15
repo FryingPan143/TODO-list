@@ -76,7 +76,7 @@ body main #listBox .list-item {
   display: grid;
   -ms-grid-columns: 80% 10% 10%;
       grid-template-columns: 80% 10% 10%;
-  height: 30px;
+  max-width: 750px;
 }
 
 body main #listBox .list-item .item-title {
@@ -86,7 +86,6 @@ body main #listBox .list-item .item-title {
 body main #listBox .list-item .item-check {
   color: green;
   font-size: 1.4em;
-  height: 30px;
   font-weight: bold;
 }
 
@@ -98,7 +97,6 @@ body main #listBox .list-item .item-check:hover {
 body main #listBox .list-item .item-delete {
   color: red;
   font-size: 1.4em;
-  height: 30px;
   font-weight: bold;
 }
 

@@ -57,20 +57,25 @@ body {
             box-shadow: 0 5px 10px #000000;
             text-align: center;
 
+
             .list-item {
 
                 display: grid;
                 grid-template-columns: 80% 10% 10%;
-                height: 30px;
+
+                // margin-top: 15px;
+                // margin-bottom: 15px;
+                max-width: 750px;
 
                 .item-title {
                     font-size: 1.4em;
+
                 }
 
                 .item-check {
                     color: green;
                     font-size: 1.4em;
-                    height: 30px;
+                    // height: 30px;
                     font-weight: bold;
 
                     &:hover {
@@ -82,7 +87,7 @@ body {
                 .item-delete {
                     color: red;
                     font-size: 1.4em;
-                    height: 30px;
+                    // height: 30px;
                     font-weight: bold;
 
                     &:hover {
