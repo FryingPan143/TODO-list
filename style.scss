@@ -1,0 +1,125 @@
+html {
+    background-color: bisque;
+}
+
+body {
+    margin: 0;
+    display: grid;
+    justify-content: center;
+    font-family: 'Akaya Telivigala', cursive;
+
+    header {
+        width: 50vw;
+        height: 10vh;
+        display: grid;
+        justify-content: center;
+
+    }
+
+    main {
+        width: 50vw;
+        height: 90vh;
+        display: grid;
+        justify-content: center;
+
+        #inputDiv {
+            width: 100%;
+
+            input {
+                width: 80%;
+                height: 28px;
+                border-radius: 10px;
+                border: 1px solid black;
+                box-shadow: 0 5px 10px #000000;
+            }
+
+            #submitBtn {
+                width: 15%;
+                height: 35px;
+                border-radius: 10px;
+                border: 1px solid black;
+                box-shadow: 0 5px 10px #000000;
+
+                &:hover {
+                    background-color: #06d899;
+                    cursor: pointer;
+                }
+            }
+        }
+
+        #listBox {
+            width: 30vw;
+            height: 80vh;
+            overflow-y: auto;
+            background-color: whitesmoke;
+            border-radius: 15px;
+            border: 1px solid black;
+            box-shadow: 0 5px 10px #000000;
+            text-align: center;
+
+            .list-item {
+
+                display: grid;
+                grid-template-columns: 80% 10% 10%;
+                height: 30px;
+
+                .item-title {
+                    font-size: 1.4em;
+                }
+
+                .item-check {
+                    color: green;
+                    font-size: 1.4em;
+                    height: 30px;
+                    font-weight: bold;
+
+                    &:hover {
+                        color: #50fc67;
+                        cursor: pointer;
+                    }
+                }
+
+                .item-delete {
+                    color: red;
+                    font-size: 1.4em;
+                    height: 30px;
+                    font-weight: bold;
+
+                    &:hover {
+                        color: #a00707;
+                        cursor: pointer;
+                    }
+                }
+            }
+
+        }
+
+    }
+}
+
+
+//scrollbar 
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 0px 25px 25px 0px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 0px 25px 25px 0px;
+
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}

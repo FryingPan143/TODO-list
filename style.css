@@ -1,0 +1,131 @@
+html {
+  background-color: bisque;
+}
+
+body {
+  margin: 0;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-family: 'Akaya Telivigala', cursive;
+}
+
+body header {
+  width: 50vw;
+  height: 10vh;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body main {
+  width: 50vw;
+  height: 90vh;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body main #inputDiv {
+  width: 100%;
+}
+
+body main #inputDiv input {
+  width: 80%;
+  height: 28px;
+  border-radius: 10px;
+  border: 1px solid black;
+  -webkit-box-shadow: 0 5px 10px #000000;
+          box-shadow: 0 5px 10px #000000;
+}
+
+body main #inputDiv #submitBtn {
+  width: 15%;
+  height: 35px;
+  border-radius: 10px;
+  border: 1px solid black;
+  -webkit-box-shadow: 0 5px 10px #000000;
+          box-shadow: 0 5px 10px #000000;
+}
+
+body main #inputDiv #submitBtn:hover {
+  background-color: #06d899;
+  cursor: pointer;
+}
+
+body main #listBox {
+  width: 30vw;
+  height: 80vh;
+  overflow-y: auto;
+  background-color: whitesmoke;
+  border-radius: 15px;
+  border: 1px solid black;
+  -webkit-box-shadow: 0 5px 10px #000000;
+          box-shadow: 0 5px 10px #000000;
+  text-align: center;
+}
+
+body main #listBox .list-item {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 80% 10% 10%;
+      grid-template-columns: 80% 10% 10%;
+  height: 30px;
+}
+
+body main #listBox .list-item .item-title {
+  font-size: 1.4em;
+}
+
+body main #listBox .list-item .item-check {
+  color: green;
+  font-size: 1.4em;
+  height: 30px;
+  font-weight: bold;
+}
+
+body main #listBox .list-item .item-check:hover {
+  color: #50fc67;
+  cursor: pointer;
+}
+
+body main #listBox .list-item .item-delete {
+  color: red;
+  font-size: 1.4em;
+  height: 30px;
+  font-weight: bold;
+}
+
+body main #listBox .list-item .item-delete:hover {
+  color: #a00707;
+  cursor: pointer;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 0px 25px 25px 0px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 0px 25px 25px 0px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+/*# sourceMappingURL=style.css.map */
