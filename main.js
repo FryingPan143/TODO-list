@@ -14,7 +14,7 @@ input.addEventListener("keyup", function (e) {
 
 submit.addEventListener("click", function () {
     let iValue = input.value;
-    let regex = /^[0-9a-zA-Z]+$/;
+    let regex = /^[0-9a-zA-Z ]+$/;
     if (iValue.length > 0 && iValue.match(regex)) {
         generateItem(iValue);
         clearInput();
