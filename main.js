@@ -2,6 +2,7 @@ let input = document.getElementById("inputField");
 let submit = document.getElementById("submitBtn");
 
 let listBox = document.getElementById("listBox"); //där alla items skall displayas 
+let overlay = document.querySelector(".overlay");
 
 
 
@@ -14,13 +15,13 @@ input.addEventListener("keyup", function (e) {
 
 submit.addEventListener("click", function () {
     let iValue = input.value;
-    let regex = /^[0-9a-zA-Z ]+$/;
-    if (iValue.length > 0 && iValue.match(regex)) {
+    let regex = /^[0-9a-zA-ZåäöÅÄÖ ]+$/;
+    if (iValue.length > 0 && iValue.match(regex) && iValue != " ") {
         generateItem(iValue);
         clearInput();
     } else {
         clearInput();
-        alert("Only Letters and numbers allowed");
+        alertBox();
     }
 });
 
@@ -42,7 +43,6 @@ function generateItem(item) {
     itemDelete.classList.add("item-delete");
     itemDelete.innerHTML = "&#10799;";
 
-
     newItem.appendChild(itemTitle);
     newItem.appendChild(itemCheck);
     newItem.appendChild(itemDelete);
@@ -55,8 +55,6 @@ function generateItem(item) {
     itemDelete.addEventListener("click", function () {
         deleteItem(newItem);
     })
-
-
 }
 
 function deleteItem(item) {
@@ -73,4 +71,24 @@ function checkItem(item) {
 
 function clearInput() {
     input.value = "";
+}
+
+function alertBox() {
+
+    overlay.style.display = "block";
+    let overlayContent = document.querySelector(".overlay-content");
+
+    let alertMsg = document.createElement("p");
+    alertMsg.classList.add("alert-msg");
+    alertMsg.innerHTML = "Only letters and numbers are allowed!";
+
+    overlayContent.appendChild(alertMsg);
+    overlay.addEventListener("click", function () {
+        clearModal();
+    });
+
+    function clearModal() {
+        overlay.style.display = "none";
+        alertMsg.innerHTML = "";
+    }
 }

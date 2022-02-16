@@ -126,4 +126,62 @@ body main #listBox .list-item .item-delete:hover {
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.7);
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  padding: 0;
+  margin: 0;
+  top: 0;
+  z-index: 1;
+  display: none;
+}
+
+.overlay .exit {
+  position: fixed;
+  right: 50px;
+  top: 10px;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.overlay .exit:hover {
+  color: #dadada;
+  cursor: pointer;
+}
+
+.overlay .overlay-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 10px;
+  width: 100vw;
+  height: 50vh;
+  margin-top: 15vh;
+}
+
+.overlay .overlay-content img {
+  -webkit-animation: slideUpIn 500ms linear forwards;
+          animation: slideUpIn 500ms linear forwards;
+  max-width: 100%;
+  max-height: 80%;
+  border: 1px solid whitesmoke;
+  background-color: black;
+  border-radius: 25px;
+}
+
+.overlay .overlay-content img:hover {
+  cursor: pointer;
+}
+
+.alert-msg {
+  color: red;
+  font-size: 1.5em;
+  font-weight: bold;
+}
 /*# sourceMappingURL=style.css.map */
